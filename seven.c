@@ -63,23 +63,26 @@ void task2()
 
 void task3()
 {
-    int k;
-
-    printf("Введите число ошибок k (k < 20): ");
-    scanf("%d", &k);
-
-    switch (k)
+    int kop; 
+    int rub;
+    int stm;
+    printf("Введите стоимость покупки в копейках\n");
+    scanf("%d", &stm);
+    rub = stm / 100;
+    kop = stm % 100;
+    printf("Стоимость покупки: %d рублей %d  ", rub, kop);
+    switch (kop % 10) 
     {
-    case 1:
-        printf("В программе найдена 1 ошибка\n");
-        break;
-    case 2:
-    case 3:
-    case 4:
-        printf("В программе найдено %d ошибки\n", k);
-        break;
-    default:
-        printf("В программе найдено %d ошибок\n", k);
+        case 1:
+            printf("копейка\n");
+            break;
+        case 2:
+        case 3:
+        case 4:
+            printf("копейки\n");
+            break;
+        default: 
+            printf("копеек\n");
     }
 }
 
